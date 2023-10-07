@@ -5,8 +5,6 @@ const port = process.env.PORT || 3000
 let message = 12
 
 app.get('/', (req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'text/html')
-  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate')
   res.send(message.toFixed())
 })
 
