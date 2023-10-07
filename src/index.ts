@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 const app = express()
 
+const port = process.env.PORT
 let message = 12
 
 app.get('/', (req: Request, res: Response) => {
@@ -13,6 +14,6 @@ app.post('/post', (req: Request, res: Response) => {
   message = Math.random() * 100
 })
 
-app.listen(2000, () => {
-  console.log('Приклад застосунку, який прослуховує 2000-ий порт!')
+app.listen(port, () => {
+  console.log(`Приклад застосунку, який прослуховує ${port} порт!`)
 })
