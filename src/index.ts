@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 const app = express()
 
 const port = process.env.PORT || 3000
-let message = 12
+let message = 123
 
 app.get('/', (req: Request, res: Response) => {
   res.send(message.toFixed())
